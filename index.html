@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script>
-document.addEventListener('DOMContentLoaded', function(){ 
-    var params = window
-        .location
-        .search
-        .replace('?','')
-        .split('&')
-        .reduce(
-            function(p,e){
-                var a = e.split('=');
-                p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
-                return p;
-            },
-            {}
-        );
- 
-    var linktop2 = 'http://185.104.114.158/';
-    for (key in params) {
-      linktop2 += key + '=' + params[key] + '&';
-    }
-
-    var d = document.getElementsByTagName('a'),
-        i = d.length;
-    while (i--) {
-        d[i].setAttribute('href', linktop2);
-        d[i].setAttribute('target', '_self');
-    }
-});    
-</script>
-
   <input type="hidden" name="pixel" value="{pixel}">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
